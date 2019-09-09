@@ -4,4 +4,4 @@ dependencies:
   - matplotlib
   - seaborn
   - pandas
-  - sklearn
+  - scikit-learn
