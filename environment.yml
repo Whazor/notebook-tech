@@ -1,0 +1,7 @@
+name: notebook-tech
+dependencies:
+  - numpy
+  - matplotlib
+  - seaborn
+  - pandas
+  - sklearn
