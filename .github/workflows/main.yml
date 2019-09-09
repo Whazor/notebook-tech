@@ -8,9 +8,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - uses: whazor/repo2docker-action@master
-      env:
-        IMAGE_NAME: notebook-tech
+    - name: Build nodebook tech
+      run: |
+        python3 -m pip install jupyter-repo2docker
+        echo "papermill" >> requirements.txt
+        jupyter-repo2docker --user-id=1001 --user-name=nbrunner --image-name=notebook-tech --no-run .
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
