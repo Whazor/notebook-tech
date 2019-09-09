@@ -9,6 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: whazor/repo2docker-action@master
+      env:
+        IMAGE_NAME: notebook-tech
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
